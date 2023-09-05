@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to the Blog</h1>
+    
+    <!-- Sample Blog Posts -->
+    <div class="blog-post">
+        <h2><a href="{{ url_for('post', post_id=1) }}">Levi</a></h2>
+        <p>Posted on January 1, 2023</p>
+        <p>hi</p>
+    </div>
+
+    <div class="blog-post">
+        <h2><a href="{{ url_for('post', post_id=2) }}">hello</a></h2>
+        <p>Posted on January 2, 2023</p>
+        <p>hello</p>
+    </div>
+
+    <!-- Add more blog posts as needed -->
+    <div class="blog-post">
+        <h2><a href="{{ url_for('post', post_id=3) }}">wow</a></h2>
+        <p>Posted on January 3, 2023</p>
+        <p>hi</p>
+    </div>
+
+    <!-- Logout Button -->
+    <a href="{{ url_for('logout') }}">Logout</a>
+
+    <a href="{{ url_for('create_post') }}">Create a New Blog Post</a>
+
+    <!-- Add a link to the user's blog history -->
+<a href="{{ url_for('my_posts') }}">View My Blog History</a>
+
+</body>
+</html>
